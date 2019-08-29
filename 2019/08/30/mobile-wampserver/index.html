@@ -4,25 +4,25 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   
-    <title>八皇后问题与回溯算法 | 见有娀之佚女</title>
+    <title>手机端访问本地wampserver | 见有娀之佚女</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Ruan Hao">
     
 
     
-    <meta name="description" content="八皇后是一个古老的问题：如何能够在8$\times$8的国际象棋棋盘上放置八个皇后，使得任何一个皇后都无法直接吃掉其他的皇后？即任意两个皇后都不能处于同一行，同一列，同一斜线。  这个算法最直观的表达是嵌套8个循环，但是这种做法不仅显得智障，而且显得智障。而这种前面摆放位置会引起后续位置变化的，最好的算法是回溯。 回溯算法就是一个搜索尝试过程。当发现不满足求解条件的时候，就回溯到上一步尝试别的路">
-<meta name="keywords" content="算法">
+    <meta name="description" content="手机端访问本地wampserver httpd.conf中Require local改为Require all granted httpd-vhosts.conf中Require local改为Require all granted 关闭防火墙 通过ipconfig指令查看本地ip（192.168.xxx.xxx) ok!">
+<meta name="keywords" content="计算机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="八皇后问题与回溯算法">
-<meta property="og:url" content="https://Anan-RH.github.io/Anan-RH.github.io/2019/08/13/eight-queens/index.html">
+<meta property="og:title" content="手机端访问本地wampserver">
+<meta property="og:url" content="https://Anan-RH.github.io/Anan-RH.github.io/2019/08/30/mobile-wampserver/index.html">
 <meta property="og:site_name" content="见有娀之佚女">
-<meta property="og:description" content="八皇后是一个古老的问题：如何能够在8$\times$8的国际象棋棋盘上放置八个皇后，使得任何一个皇后都无法直接吃掉其他的皇后？即任意两个皇后都不能处于同一行，同一列，同一斜线。  这个算法最直观的表达是嵌套8个循环，但是这种做法不仅显得智障，而且显得智障。而这种前面摆放位置会引起后续位置变化的，最好的算法是回溯。 回溯算法就是一个搜索尝试过程。当发现不满足求解条件的时候，就回溯到上一步尝试别的路">
+<meta property="og:description" content="手机端访问本地wampserver httpd.conf中Require local改为Require all granted httpd-vhosts.conf中Require local改为Require all granted 关闭防火墙 通过ipconfig指令查看本地ip（192.168.xxx.xxx) ok!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-13T16:13:24.869Z">
+<meta property="og:updated_time" content="2019-08-29T17:54:36.049Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="八皇后问题与回溯算法">
-<meta name="twitter:description" content="八皇后是一个古老的问题：如何能够在8$\times$8的国际象棋棋盘上放置八个皇后，使得任何一个皇后都无法直接吃掉其他的皇后？即任意两个皇后都不能处于同一行，同一列，同一斜线。  这个算法最直观的表达是嵌套8个循环，但是这种做法不仅显得智障，而且显得智障。而这种前面摆放位置会引起后续位置变化的，最好的算法是回溯。 回溯算法就是一个搜索尝试过程。当发现不满足求解条件的时候，就回溯到上一步尝试别的路">
+<meta name="twitter:title" content="手机端访问本地wampserver">
+<meta name="twitter:description" content="手机端访问本地wampserver httpd.conf中Require local改为Require all granted httpd-vhosts.conf中Require local改为Require all granted 关闭防火墙 通过ipconfig指令查看本地ip（192.168.xxx.xxx) ok!">
 
     
     <link rel="alternative" href="/atom.xml" title="见有娀之佚女" type="application/atom+xml">
@@ -82,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/Anan-RH.github.io/2019/08/13/eight-queens/" title="八皇后问题与回溯算法" itemprop="url">八皇后问题与回溯算法</a>
+      <a href="/Anan-RH.github.io/2019/08/30/mobile-wampserver/" title="手机端访问本地wampserver" itemprop="url">手机端访问本地wampserver</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/Anan-RH.github.io/about" title="Ruan Hao" target="_blank" itemprop="author">Ruan Hao</a>
 		
   <p class="article-time">
-    <time datetime="2019-08-13T15:40:35.000Z" itemprop="datePublished"> 发表于 2019-08-13</time>
+    <time datetime="2019-08-29T17:49:12.000Z" itemprop="datePublished"> 发表于 2019-08-30</time>
     
   </p>
 </header>
@@ -98,86 +98,18 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#手机端访问本地wampserver"><span class="toc-number">1.</span> <span class="toc-text">手机端访问本地wampserver</span></a></li></ol>
 		
 		</div>
 		
-		<blockquote>
-<p>八皇后是一个古老的问题：如何能够在8$\times$8的国际象棋棋盘上放置八个皇后，使得任何一个皇后都无法直接吃掉其他的皇后？即任意两个皇后都不能处于同一行，同一列，同一斜线。</p>
-</blockquote>
-<p>这个算法最直观的表达是嵌套8个循环，但是这种做法不仅显得智障，而且显得智障。而这种前面摆放位置会引起后续位置变化的，最好的算法是回溯。</p>
-<p>回溯算法就是一个搜索尝试过程。当发现不满足求解条件的时候，就回溯到上一步尝试别的路径。走得通就走，走不通就回去走别的路，遍历每个分支，最后求出所有答案。就八皇后问题，C语言代码如下</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 8 <span class="comment">//多少皇后</span></span></span><br><span class="line"><span class="keyword">int</span> q[N];<span class="comment">//存放每一行皇后所在的位置，仅用一个数组即可</span></span><br><span class="line"><span class="keyword">int</span> count=<span class="number">0</span>; <span class="comment">//摆法序号</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 打印摆法序号和图示，0代表空，1代表有皇后 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_queens</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d:\n"</span>,count);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">0</span>;x&lt;N;x++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> y=<span class="number">0</span>;y&lt;N;y++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(q[x]==y)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">" 1"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">" 0"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 搜索第几行 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span> hang)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(hang==<span class="number">8</span>)&#123;</span><br><span class="line">        count++;</span><br><span class="line">        print_queens();<span class="comment">//行数为0-7，搜索到8说明答案可行，打印出来</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123; <span class="comment">//遍历第hang行的每一列</span></span><br><span class="line">            <span class="keyword">int</span> can=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> m=<span class="number">0</span>;m&lt;hang;m++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(q[m]==i||q[m]-i==hang-m||q[m]-i==m-hang)&#123; <span class="comment">//与之前每行比较，若同列或同斜线，则结束搜索，尝试下一个路径</span></span><br><span class="line">                    can=<span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(can)&#123;</span><br><span class="line">                q[hang]=i;</span><br><span class="line">                search(hang+<span class="number">1</span>);<span class="comment">//若答案可行则记录下该行皇后的位置</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(q,<span class="number">0</span>,<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*N);</span><br><span class="line">    search(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>可以更改N解决其他数量皇后的问题。<br>解出结果为</p>
-<pre>
-1:
- 1 0 0 0 0 0 0 0
- 0 0 0 0 1 0 0 0
- 0 0 0 0 0 0 0 1
- 0 0 0 0 0 1 0 0
- 0 0 1 0 0 0 0 0
- 0 0 0 0 0 0 1 0
- 0 1 0 0 0 0 0 0
- 0 0 0 1 0 0 0 0
-
-
-2:
- 1 0 0 0 0 0 0 0
- 0 0 0 0 0 1 0 0
- 0 0 0 0 0 0 0 1
- 0 0 1 0 0 0 0 0
- 0 0 0 0 0 0 1 0
- 0 0 0 1 0 0 0 0
- 0 1 0 0 0 0 0 0
- 0 0 0 0 1 0 0 0
-
-
-3:
- 1 0 0 0 0 0 0 0
- 0 0 0 0 0 0 1 0
- 0 0 0 1 0 0 0 0
- 0 0 0 0 0 1 0 0
- 0 0 0 0 0 0 0 1
- 0 1 0 0 0 0 0 0
- 0 0 0 0 1 0 0 0
- 0 0 1 0 0 0 0 0
-
-
-4:
- 1 0 0 0 0 0 0 0
- 0 0 0 0 0 0 1 0
- 0 0 0 0 1 0 0 0
- 0 0 0 0 0 0 0 1
- 0 1 0 0 0 0 0 0
- 0 0 0 1 0 0 0 0
- 0 0 0 0 0 1 0 0
- 0 0 1 0 0 0 0 0
-
-...
-
-
-91:
- 0 0 0 0 0 0 0 1
- 0 0 1 0 0 0 0 0
- 1 0 0 0 0 0 0 0
- 0 0 0 0 0 1 0 0
- 0 1 0 0 0 0 0 0
- 0 0 0 0 1 0 0 0
- 0 0 0 0 0 0 1 0
- 0 0 0 1 0 0 0 0
-
-
-92:
- 0 0 0 0 0 0 0 1
- 0 0 0 1 0 0 0 0
- 1 0 0 0 0 0 0 0
- 0 0 1 0 0 0 0 0
- 0 0 0 0 0 1 0 0
- 0 1 0 0 0 0 0 0
- 0 0 0 0 0 0 1 0
- 0 0 0 0 1 0 0 0
-</pre>  
+		<h3 id="手机端访问本地wampserver"><a href="#手机端访问本地wampserver" class="headerlink" title="手机端访问本地wampserver"></a>手机端访问本地wampserver</h3><ol>
+<li>httpd.conf中Require local改为Require all granted</li>
+<li>httpd-vhosts.conf中Require local改为Require all granted</li>
+<li>关闭防火墙</li>
+<li>通过ipconfig指令查看本地ip（192.168.xxx.xxx)</li>
+<li>ok!</li>
+</ol>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -185,7 +117,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/Anan-RH.github.io/tags/算法/">算法</a>
+  <span></span> <a href="/Anan-RH.github.io/tags/计算机/">计算机</a>
   </div>
 
 </div>
@@ -194,7 +126,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://Anan-RH.github.io/Anan-RH.github.io/2019/08/13/eight-queens/" data-title="八皇后问题与回溯算法 | 见有娀之佚女" data-tsina="" class="share clearfix">
+	  <div data-url="https://Anan-RH.github.io/Anan-RH.github.io/2019/08/30/mobile-wampserver/" data-title="手机端访问本地wampserver | 见有娀之佚女" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -207,19 +139,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/Anan-RH.github.io/2019/08/20/circular-constant/" title="圆周率">
-  <strong>上一篇：</strong><br/>
-  <span>
-  圆周率</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/Anan-RH.github.io/2019/08/13/Fabonacci-sequence/"  title="斐波那契通项公式">
+<a href="/Anan-RH.github.io/2019/08/20/circular-constant/"  title="圆周率">
  <strong>下一篇：</strong><br/> 
- <span>斐波那契通项公式
+ <span>圆周率
 </span>
 </a>
 </div>
@@ -236,7 +160,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#手机端访问本地wampserver"><span class="toc-number">1.</span> <span class="toc-text">手机端访问本地wampserver</span></a></li></ol>
  
   </div>
 
